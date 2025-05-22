@@ -1,5 +1,5 @@
 using System.Diagnostics;
-using BlogApp.Models;
+using BlogApp.DAL.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.BLL.Controllers
