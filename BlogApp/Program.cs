@@ -26,7 +26,7 @@ namespace BlogApp
 
             IMapper mapper = mapperConfig.CreateMapper();
 
-            string connection = builder.Configuration.GetConnectionString("DefaultConnection");
+            string connection = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new ArgumentException("Need to connect to database");
             builder.Services.AddDbContext<BlogDbContext>(options => options.UseSqlServer(connection))
                 .AddIdentity<User, Role>(opts =>
                 {
