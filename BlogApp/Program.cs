@@ -27,7 +27,7 @@ namespace BlogApp
             IMapper mapper = mapperConfig.CreateMapper();
 
             string connection = builder.Configuration.GetConnectionString("DefaultConnection");
-            builder.Services.AddDbContext<Blog2DbContext>(options => options.UseSqlServer(connection))
+            builder.Services.AddDbContext<BlogDbContext>(options => options.UseSqlServer(connection))
                 .AddIdentity<User, Role>(opts =>
                 {
                     opts.Password.RequiredLength = 6;
@@ -36,7 +36,7 @@ namespace BlogApp
                     opts.Password.RequireUppercase = false;
                     opts.Password.RequireDigit = false;
                 })
-                .AddEntityFrameworkStores<Blog2DbContext>();
+                .AddEntityFrameworkStores<BlogDbContext>();
 
             builder.Services
                             .AddSingleton(mapper)

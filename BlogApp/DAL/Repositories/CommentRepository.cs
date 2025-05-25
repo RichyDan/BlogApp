@@ -5,9 +5,9 @@ namespace BlogApp.DAL.Repositories
 {
     public class CommentRepository : ICommentRepository
     {
-        private Blog2DbContext _context;
+        private BlogDbContext _context;
 
-        public CommentRepository(Blog2DbContext context)
+        public CommentRepository(BlogDbContext context)
         {
             _context = context;
         }

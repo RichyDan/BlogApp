@@ -5,9 +5,9 @@ namespace BlogApp.DAL.Repositories
 {
     public class TagRepository : ITagRepository
     {
-        private Blog2DbContext _context;
+        private BlogDbContext _context;
 
-        public TagRepository(Blog2DbContext context)
+        public TagRepository(BlogDbContext context)
         {
             _context = context;
         }

@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.DAL
 {
-    public class Blog2DbContext : DbContext
+    public class BlogDbContext : DbContext
     {
         public DbSet<Post> Posts { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Comment> Comments { get; set; }
 
-        public Blog2DbContext(DbContextOptions<Blog2DbContext> options) : base(options)
+        public BlogDbContext(DbContextOptions<BlogDbContext> options) : base(options)
         {
             Database.EnsureCreated();
         }

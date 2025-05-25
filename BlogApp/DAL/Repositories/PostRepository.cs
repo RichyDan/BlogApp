@@ -6,9 +6,9 @@ namespace BlogApp.DAL.Repositories
 {
     public class PostRepository : IPostRepository
     {
-        private Blog2DbContext _context;
+        private BlogDbContext _context;
 
-        public PostRepository(Blog2DbContext context)
+        public PostRepository(BlogDbContext context)
         {
             _context = context;
         }
