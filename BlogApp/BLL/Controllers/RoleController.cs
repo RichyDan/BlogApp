@@ -1,4 +1,5 @@
-﻿using BlogApp.BLL.Services.IServices;
+﻿using AutoMapper;
+using BlogApp.BLL.Services.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,10 +9,11 @@ namespace BlogApp.BLL.Controllers
     {
         private readonly IRoleService _roleService;
         private readonly ILogger<RoleController> _logger;
-        
-        public RoleController(IRoleService roleService, ILogger<RoleController> logger)
+        private IMapper _mapper;
+
+        public RoleController(IMapper mapper, IRoleService roleService, ILogger<RoleController> logger)
         {
-            
+            _mapper = mapper;
             _roleService = roleService;
             _logger = logger;
         }

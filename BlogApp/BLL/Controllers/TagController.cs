@@ -1,4 +1,5 @@
-﻿using BlogApp.BLL.Services.IServices;
+﻿using AutoMapper;
+using BlogApp.BLL.Services.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,10 +9,11 @@ namespace BlogApp.BLL.Controllers
     {
         private readonly ITagService _tagService;
         private readonly ILogger<TagController> _logger;
-        
-        public TagController(ITagService tagService, ILogger<TagController> logger)
+        private IMapper _mapper;
+
+        public TagController(IMapper mapper, ITagService tagService, ILogger<TagController> logger)
         {
-            
+            _mapper = mapper;
             _tagService = tagService;
             _logger = logger;
         }

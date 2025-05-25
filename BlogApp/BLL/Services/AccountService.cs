@@ -1,4 +1,5 @@
-﻿using BlogApp.BLL.Services.IServices;
+﻿using AutoMapper;
+using BlogApp.BLL.Services.IServices;
 using BlogApp.DAL.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -11,13 +12,13 @@ namespace BlogApp.BLL.Services
         private readonly SignInManager<User> _signInManager;
         private readonly RoleManager<Role> _roleManager;
         private readonly IPostRepository _postRepository;
-
+        public IMapper _mapper;
 
         // конструктор для аккаунта
-        public AccountService(IPostRepository postRepository, RoleManager<Role> roleManager, UserManager<User> userManager, SignInManager<User> signInManager)
+        public AccountService(IPostRepository postRepository, RoleManager<Role> roleManager, IMapper mapper, UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _roleManager = roleManager;
-            
+            _mapper = mapper;
             _userManager = userManager;
             _signInManager = signInManager;
             _postRepository = postRepository;

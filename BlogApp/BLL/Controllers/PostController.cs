@@ -1,4 +1,5 @@
-﻿using BlogApp.BLL.Services.IServices;
+﻿using AutoMapper;
+using BlogApp.BLL.Services.IServices;
 using BlogApp.DAL.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -12,13 +13,13 @@ namespace BlogApp.BLL.Controllers
         private readonly IPostService _postService;
         private readonly ITagRepository _tagRepo;
         private readonly UserManager<User> _userManager;
-        
+        private IMapper _mapper;
 
-        public PostController(ITagRepository tagRepository, IPostRepository repo, IPostService postService, UserManager<User> userManager)
+        public PostController(ITagRepository tagRepository, IPostRepository repo, IMapper mapper, IPostService postService, UserManager<User> userManager)
         {
             _tagRepo = tagRepository;
             _repo = repo;
-            
+            _mapper = mapper;
             _postService = postService;
             _userManager = userManager;
         }

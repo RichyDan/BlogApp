@@ -1,4 +1,5 @@
-﻿using BlogApp.BLL.Services.IServices;
+﻿using AutoMapper;
+using BlogApp.BLL.Services.IServices;
 using BlogApp.DAL.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -12,10 +13,11 @@ namespace BlogApp.BLL.Controllers
         private ICommentRepository _commentRepo;
         private ICommentService _commentService;
         private readonly UserManager<User> _userManager;
+        private readonly IMapper _mapper;
 
-        public CommentController(ICommentRepository commentRepo, ICommentService commentService, UserManager<User> userManager)
+        public CommentController(IMapper mapper, ICommentRepository commentRepo, ICommentService commentService, UserManager<User> userManager)
         {
-            
+            _mapper = mapper;
             _commentRepo = commentRepo;
             _commentService = commentService;
             _userManager = userManager;
