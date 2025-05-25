@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace BlogApp.DAL
 {
@@ -13,7 +15,14 @@ namespace BlogApp.DAL
 
         public BlogDbContext(DbContextOptions<BlogDbContext> options) : base(options)
         {
-            Database.Migrate();
+            if (!Database.GetService<IRelationalDatabaseCreator>().Exists())
+            {
+                Database.EnsureCreated();
+            }
+            else
+            {
+                Database.Migrate();
+            }
         }
 
     }
