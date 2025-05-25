@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using BlogApp.BLL.Services.IServices;
+using BlogApp.BLL.ViewModels.Comments;
 using BlogApp.DAL.Models;
+using BlogApp.DAL.Repositories.IRepositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

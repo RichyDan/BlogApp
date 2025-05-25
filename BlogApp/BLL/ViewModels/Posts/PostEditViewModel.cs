@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BlogApp.BLL.ViewModels.Tags;
+using System.ComponentModel.DataAnnotations;
 
 namespace BlogApp.BLL.ViewModels.Posts
 {

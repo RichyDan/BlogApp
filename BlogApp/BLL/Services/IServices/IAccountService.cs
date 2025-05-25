@@ -1,4 +1,5 @@
-﻿using BlogApp.DAL.Models;
+﻿using BlogApp.BLL.ViewModels.User;
+using BlogApp.DAL.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace BlogApp.BLL.Services.IServices

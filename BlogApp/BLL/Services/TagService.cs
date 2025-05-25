@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using BlogApp.BLL.Services.IServices;
+using BlogApp.BLL.ViewModels.Tags;
 using BlogApp.DAL.Models;
+using BlogApp.DAL.Repositories.IRepositories;
 
 namespace BlogApp.BLL.Services
 {

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BlogApp.BLL.Services.IServices;
+using BlogApp.BLL.ViewModels.User;
 using BlogApp.DAL.Models;
 using Microsoft.AspNetCore.Identity;
 

@@ -1,7 +1,11 @@
 ﻿using AutoMapper;
 using BlogApp.BLL.Services.IServices;
+using BlogApp.BLL.ViewModels.Posts;
+using BlogApp.BLL.ViewModels.Tags;
 using BlogApp.DAL.Models;
+using BlogApp.DAL.Repositories.IRepositories;
 using Microsoft.AspNetCore.Identity;
+using System.Linq;
 
 namespace BlogApp.BLL.Services
 {

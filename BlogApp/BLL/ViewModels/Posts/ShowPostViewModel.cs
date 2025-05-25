@@ -1,4 +1,6 @@
-﻿namespace BlogApp.BLL.ViewModels.Posts
+﻿using BlogApp.BLL.ViewModels.Tags;
+
+namespace BlogApp.BLL.ViewModels.Posts
 {
     public class ShowPostViewModel
     {

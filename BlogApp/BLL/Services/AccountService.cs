@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using BlogApp.BLL.Services.IServices;
+using BlogApp.BLL.ViewModels.Roles;
+using BlogApp.BLL.ViewModels.User;
 using BlogApp.DAL.Models;
+using BlogApp.DAL.Repositories.IRepositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

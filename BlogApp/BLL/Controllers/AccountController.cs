@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BlogApp.BLL.Services.IServices;
+using BlogApp.BLL.ViewModels.User;
 using BlogApp.DAL.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -15,18 +16,21 @@ namespace BlogApp.BLL.Controllers
         private readonly IAccountService _accountService;
         private readonly IMapper _mapper;
         private readonly ILogger<AccountController> _logger;
-    }
 
-    public AccountController(RoleManager<Role> roleManager, UserManager<User> userManager, IMapper mapper,
-                             SignInManager<User> signInManager, IAccountService accountService, ILogger<AccountController> logger)
-    {
-        _roleManager = roleManager;
-        _userManager = userManager;
-        _mapper = mapper;
-        _signInManager = signInManager;
-        _accountService = accountService;
-        _logger = logger;
-    }
+        public AccountController(RoleManager<Role> roleManager,
+                                 IMapper mapper,
+                                 UserManager<User> userManager,
+                                 SignInManager<User> signInManager,
+                                 IAccountService accountService,
+                                 ILogger<AccountController> logger)
+        {
+            _roleManager = roleManager;
+            _mapper = mapper;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _accountService = accountService;
+            _logger = logger;
+        }
 
         [Route("Account/Login")]
         [HttpGet]

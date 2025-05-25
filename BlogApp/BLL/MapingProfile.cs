@@ -1,4 +1,8 @@
 ﻿using AutoMapper;
+using BlogApp.BLL.ViewModels.Comments;
+using BlogApp.BLL.ViewModels.Posts;
+using BlogApp.BLL.ViewModels.Tags;
+using BlogApp.BLL.ViewModels.User;
 using BlogApp.DAL.Models;
 
 namespace BlogApp.BLL
