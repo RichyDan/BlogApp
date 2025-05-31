@@ -1,4 +1,7 @@
-﻿namespace API.Services.IServices
+﻿using API.DATA.Models.Request.Roles;
+using API.DATA.Models.Response;
+
+namespace API.Services.IServices
 {
     public interface IRoleService
     {

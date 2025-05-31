@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using API.Services.IServices;
+using API.DATA.Models.Response;
+using API.DATA.Models.Request.Users;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Services
 {

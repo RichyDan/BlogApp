@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity.Data;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
+using API.DATA.Models.Request.Users;
+using API.DATA.Models.Response;
 
 namespace API.Services.IServices
 {

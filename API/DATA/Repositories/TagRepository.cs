@@ -1,4 +1,8 @@
-﻿namespace API.DATA.Repositories
+﻿using API.DATA.Models;
+using API.DATA.Models.Response;
+using API.DATA.Repositories.IRepositories;
+
+namespace API.DATA.Repositories
 {
     public class TagRepository : ITagRepository
     {

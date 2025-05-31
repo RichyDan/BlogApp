@@ -1,4 +1,6 @@
-﻿namespace API.DATA.Repositories.IRepo
+﻿using API.DATA.Models.Response;
+
+namespace API.DATA.Repositories.IRepositories
 {
     public interface IPostRepository
     {

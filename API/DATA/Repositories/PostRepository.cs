@@ -1,4 +1,9 @@
-﻿namespace API.DATA.Repositories
+﻿using API.DATA.Models;
+using API.DATA.Models.Response;
+using API.DATA.Repositories.IRepositories;
+using Microsoft.EntityFrameworkCore;
+
+namespace API.DATA.Repositories
 {
     public class PostRepository : IPostRepository
     {
